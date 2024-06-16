@@ -1,15 +1,15 @@
 <template>
   <div class="delivery-location">
     <BaseHeading variant="h3" v-if="isLocationVisible">
-      <span class="delivery-location__title">Your location is:</span>
+      <span class="delivery-location__title">Ваш регион:</span>
       {{ location }}
     </BaseHeading>
     <div v-if="!isSelected" class="delivery-location__confirm-block">
-      <BaseHeading variant="h3">Is that correct?</BaseHeading>
+      <BaseHeading variant="h3">Верно?</BaseHeading>
       <div class="delivery-location__actions">
-        <BaseButton variant="outlined" @click="confirm(false)">No</BaseButton>
+        <BaseButton variant="outlined" @click="confirm(false)">Нет</BaseButton>
         <BaseButton variant="contained" mode="success" @click="confirm(true)"
-          >Yes</BaseButton
+          >Да</BaseButton
         >
       </div>
     </div>
@@ -26,9 +26,9 @@ import BaseHeading from "./UI/BaseHeading.vue";
 import { ref } from "@vue/reactivity";
 import { computed } from "@vue/runtime-core";
 
-const MESSAGE_SUCCESS = "Thank you. Your region will be set automatically";
+const MESSAGE_SUCCESS = "Спасибо. Ваш регион будет указан в форме автоматически";
 const MESSAGE_FAIL =
-  "We are sorry. Please enter your delivery region manually in the form below";
+  "Извините, не получилось определить автоматически ваш регион. Укажите пожалуйста его вручную.";
 
 const emit = defineEmits(["onConfirmLocationClick"]);
 const props = defineProps({

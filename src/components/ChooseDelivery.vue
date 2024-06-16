@@ -38,8 +38,8 @@ const selectDelivery = (deliveryOption) => {
 
 const price = computed(() =>
   selectedDiveryOption.price === 0
-    ? "It's free"
-    : "Price: $" + selectedDiveryOption.price
+    ? "Самовывоз бесплатный"
+    : "Стоимость доставки: $" + selectedDiveryOption.price
 );
 </script>
 
