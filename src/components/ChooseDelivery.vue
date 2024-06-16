@@ -39,7 +39,7 @@ const selectDelivery = (deliveryOption) => {
 const price = computed(() =>
   selectedDiveryOption.price === 0
     ? "Самовывоз бесплатный"
-    : "Стоимость доставки: $" + selectedDiveryOption.price
+    : `Стоимость доставки: ${selectedDiveryOption.price} руб.`
 );
 </script>
 
